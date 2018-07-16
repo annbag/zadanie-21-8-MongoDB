@@ -52,7 +52,7 @@ const kenny = new User({
 
 kenny.manify(function(err, name) {
     if (err) throw err;
-    console.log('Twoje nowe imię to: ' + name);
+    console.log('Your new name: ' + name);
 });
 
 const benny = new User({
@@ -63,7 +63,7 @@ const benny = new User({
 
 benny.manify(function(err, name) {
     if (err) throw err;
-    console.log('Twoje nowe imię to: ' + name);
+    console.log('Your new name: ' + name);
 });
 
 const mark = new User({
@@ -74,7 +74,7 @@ const mark = new User({
 
 mark.manify(function(err, name) {
     if (err) throw err;
-    console.log('Twoje nowe imię to: ' + name);
+    console.log('Your new name: ' + name);
 });
 
 const findAllUsers = function() {
@@ -104,7 +104,7 @@ const updadeUserPassword = function() {
             return user.save(function(err) {
                 if (err) throw err;
 
-                console.log('Uzytkownik ' + user.name + ' zostal pomyslnie zaktualizowany');
+                console.log('User ' + user.name + ' has been successfully updated');
             })
         })
 }
@@ -114,7 +114,7 @@ const updateUsername = function() {
     return User.findOneAndUpdate({ username: 'Benny_the_boy' }, { username: 'Benny_the_man' }, { new: true }, function(err, user) {
         if (err) throw err;
 
-        console.log('Nazwa uzytkownika po aktualizacji to ' + user.username);
+        console.log('The user name after update is ' + user.username);
     })
 }
 
